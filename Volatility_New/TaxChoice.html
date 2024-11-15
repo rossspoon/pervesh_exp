@@ -1,0 +1,10 @@
+{% extends "global/Page.html" %}
+
+{% block content %}
+    <h2>Tax Choice</h2>
+    <p>Your assigned income distribution for this round: {{ assigned_income_distribution }}</p>
+    <form method="post">
+        {{ form|crispy }}  <!-- This line renders the form using crispy-forms -->
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+{% endblock %}

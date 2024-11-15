@@ -1,0 +1,18 @@
+{% extends "global/Page.html" %}
+{% block content %}
+<div style="max-width: 800px; margin: 0 auto; padding: 20px; text-align: justify;">
+    <h1 style="text-align: center;">Placement in Groups</h1>
+    <p>
+        At the beginning of the experiment, each participant will be assigned an income distribution from a set of six income distributions.
+        The assigned distribution remains the same throughout the experiment for each participant.
+    </p>
+    <p>
+        After the assignment of the income distribution, you'll be placed in a group of <strong>{{ players_per_group }}</strong> participants randomly.
+        This means that the participants in the group may or may not differ in terms of their assigned income distribution.
+        The composition of the group remains the same throughout the experiment.
+    </p>
+    <form method="post" style="text-align: center; margin-top: 20px;">
+        <button type="submit" class="btn btn-primary" style="font-size: 18px; padding: 10px 20px;">Continue</button>
+    </form>
+</div>
+{% endblock %}

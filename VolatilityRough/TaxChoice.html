@@ -1,0 +1,38 @@
+{% extends "global/Page.html" %}
+{% load static %}
+
+{% block content %}
+<h1>Tax Choice Round {{ round_number }}</h1>
+
+<!-- Form for submitting tax choice -->
+
+{{ formfields }}  <!-- Display form fields -->
+{{next_button}}
+
+<!-- Display a table of previous rounds -->
+<h2>Previous Rounds</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Round</th>
+            <th>Your Tax Choice</th>
+            <th>Implemented Tax Rate</th>
+            <th>Realized Income</th>
+            <th>Tax Deducted</th>
+            <th>Transferred Revenue</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for round in previous_rounds %}
+            <tr>
+                <td>{{ round.round_number }}</td>
+                <td>{{ round.tax_choice }}</td>
+                <td>{{ round.group.median_tax_rate }}</td>
+                <td>{{ round.realized_income }}</td>
+                <td>{{ round.tax_deducted }}</td>
+                <td>{{ round.transferred_revenue }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

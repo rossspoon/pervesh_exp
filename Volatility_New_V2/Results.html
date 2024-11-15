@@ -1,0 +1,17 @@
+{% extends "global/Page.html" %}
+
+{% block content %}
+    <h2>Results for Round {{ player.round_number }}</h2>
+    <p>Your assigned income distribution: {{ player.assigned_income_distribution }}</p>
+    <hr>
+    <p>Median tax rate chosen by the group: {{ group.median_tax }}%</p>
+    <hr>
+    <p>Your current income: {{ player.current_income }}</p>
+    <p>Tax deducted from Income: {{ player.tax_deducted }}</p>
+    <p>Your income after tax: {{ player.after_tax_income }}</p>
+    <p>Share of tax revenue received: {{ player.transfers }}</p>
+    <p>Your final income after tax revenue distribution: {{ player.final_income }}</p>
+
+
+    {{next_button}}
+{% endblock %}

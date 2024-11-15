@@ -1,0 +1,35 @@
+from ._builtin import Page, WaitPage  # Import base classes for oTree pages
+
+
+# Page for players to make their tax choices
+class TaxChoice(Page):
+    form_model = 'player'  # Use Player model to store form data
+    form_fields = ['tax_choice']  # Form field to capture tax choice
+
+    # Method to set realized income and distribute revenue after tax choice
+    def before_next_page(self):
+        self.player.set_realized_income()  # Assign income for the round
+        self.group.set_median_tax()  # Calculate the median tax rate
+        if self.player.id_in_group == 1:  # Ensure only one player triggers revenue distribution
+            self.group.distribute_revenue()
+
+    # Variables to pass to the template for display
+    def vars_for_template(self):
+        return {
+            'round_number': self.subsession.round_number,  # Current round number
+            'previous_rounds': self.player.in_previous_rounds(),  # Data from previous rounds
+        }
+
+# Page to display the results of the round
+class Results(Page):
+    def vars_for_template(self):
+        return {
+            'tax_choice': self.player.tax_choice,  # Player's tax choice
+            'realized_income': self.player.realized_income,  # Realized income for the round
+            'tax_deducted': self.player.tax_deducted,  # Amount of tax deducted
+            'transferred_revenue': self.player.transferred_revenue,  # Revenue shared with the player
+            'income_after_tax': self.player.income_after_tax,  # Final income after deductions
+        }
+
+# Sequence of pages in the experiment
+page_sequence = [TaxChoice, Results]

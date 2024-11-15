@@ -1,0 +1,15 @@
+{% extends "global/Page.html" %}
+{% load static %}
+
+{% block content %}
+<h1>Results for Round {{ round_number }}</h1>
+
+<!-- Display results for the current round -->
+<p>Your Tax Choice: {{ tax_choice }}%</p>
+<p>Realized Income: {{ realized_income }}</p>
+<p>Tax Deducted: {{ tax_deducted }}</p>
+<p>Transferred Revenue: {{ transferred_revenue }}</p>
+<p>Income After Tax: {{ income_after_tax }}</p>
+
+<a href="{% url 'VolatilityRough:TaxChoice' %}">Next Round</a> <!-- Link to the next round -->
+{% endblock %}

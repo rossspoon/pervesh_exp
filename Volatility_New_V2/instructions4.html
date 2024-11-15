@@ -1,0 +1,45 @@
+ {% extends "global/Page.html" %}
+{% block content %}
+<div style="max-width: 800px; margin: 0 auto; padding: 20px; text-align: justify;">
+    <h1 style="text-align: center;">Decision Making</h1>
+    <p>
+        During this experiment, you will make several decisions that will affect both your payment and the payments of
+        the other members of your group at the end of the experiment.
+    </p>
+    <p>
+        The experiment consists of 20 rounds. At the start of each round, you will decide on a tax rate for that round.
+        Once all group members have submitted their tax choices, the computer will calculate the **median tax rate**,
+        which will be applied as the group's tax rate. For instance, if the tax rates chosen by the group are 10%, 15%,
+        and 20%, the group's median tax rate will be 15%.
+    </p>
+    <p>
+        After the median tax rate is determined, the computer will randomly select your income for that round from your
+        assigned income distribution. The group's median tax rate will then be applied to your income to calculate the
+        tax deducted. The total tax revenue collected from the group will be shared equally among all members.
+    </p>
+    <p>
+        <strong>Example:</strong> Imagine the group's median tax rate is 15%, and the individual incomes are as follows:
+        100 (yours), 200, and 300. The tax deducted will be:
+        <ul>
+            <li>15 (for you),</li>
+            <li>30 (for the second member),</li>
+            <li>45 (for the third member).</li>
+        </ul>
+        This results in a total tax revenue of 90 (15 + 30 + 45). Each group member will receive an equal share of
+        the tax revenue, which is 30 (90 ÷ 3). The final incomes will then be:
+        <ul>
+            <li>115 for you (100 - 15 + 30),</li>
+            <li>200 for the second member (200 - 30 + 30),</li>
+            <li>285 for the third member (300 - 45 + 30).</li>
+        </ul>
+        <em>Note:</em> You will not have access to information about the income or decisions of other group members.
+        This example is provided solely to illustrate how the process works.
+    </p>
+    <p>
+        After each round, you will be given details about the results of your choice.
+    </p>
+    <form method="post" style="text-align: center; margin-top: 20px;">
+        <button type="submit" class="btn btn-primary" style="font-size: 18px; padding: 10px 20px;">Continue</button>
+    </form>
+</div>
+{% endblock %}

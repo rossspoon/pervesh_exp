@@ -1,0 +1,167 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-02-13 09:21+0100\n"
+"PO-Revision-Date: 2019-02-13 11:26+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.2.1\n"
+
+#: templates/icl/Decision.html:18
+msgid "Your Decision"
+msgstr "La tua scelta"
+
+#: templates/icl/Decision.html:34
+#, python-format
+msgid "Page %(page)s of %(total)s"
+msgstr "Pagina %(page)s di %(total)s"
+
+#: templates/icl/Decision.html:51
+msgid "What do you prefer?"
+msgstr "Quale opzione preferisci?"
+
+#: templates/icl/Decision.html:55 templates/icl/Results.html:47
+msgid "Option A:"
+msgstr "Opzione A:"
+
+#: templates/icl/Decision.html:58 templates/icl/Results.html:50
+#, python-format
+msgid ""
+"a %(p_hi)s chance of winning %(hi)s and <br/> a %(p_lo)s chance of winning "
+"%(lo)s"
+msgstr ""
+"%(hi)s Talleri con probabilità del %(p_hi)s <br> %(lo)s Talleri con "
+"probabilità del %(p_lo)s"
+
+#: templates/icl/Decision.html:67 templates/icl/Results.html:60
+#: templates/icl/Results.html:64
+msgid "Option A"
+msgstr "Opzione A"
+
+#: templates/icl/Decision.html:76 templates/icl/Results.html:78
+msgid "Option B:"
+msgstr "Opzione B:"
+
+#: templates/icl/Decision.html:80 templates/icl/Results.html:82
+#, python-format
+msgid "an amount of %(sure_payoff)s as a sure payment"
+msgstr "%(sure_payoff)s Talleri come pagamento sicuro"
+
+#: templates/icl/Decision.html:89 templates/icl/Results.html:91
+#: templates/icl/Results.html:95
+msgid "Option B"
+msgstr "Opzione B"
+
+#: templates/icl/Decision.html:101 templates/icl/Results.html:113
+msgid "I'm indifferent between Option A and Option B"
+msgstr "Sono indifferente tra l’Opzione A e l’Opzione B"
+
+#: templates/icl/Decision.html:108 templates/icl/Results.html:122
+#: templates/icl/Results.html:126
+msgid "Indifferent"
+msgstr "Indifferente"
+
+#: templates/icl/Instructions.html:34
+msgid "In the following, you can choose between a sure payment and a lottery."
+msgstr ""
+"Nelle domande che seguono, ti chiederemo di scegliere tra un pagamento "
+"sicuro ed una lotteria."
+
+#: templates/icl/Instructions.html:37
+#, python-format
+msgid ""
+"We will present to you %(n)s different choices. While the lottery is the "
+"same in all choices, the sure payment will differ in every choice."
+msgstr ""
+"Ti chiederemo di fare %(n)s decisioni. La lotteria è la stessa in tutte le "
+"decisioni mentre il pagamento sicuro cambia in ogni decisione."
+
+#: templates/icl/Instructions.html:44
+msgid ""
+"If you chose the lottery, a random draw will determine whether the high or "
+"low outcome will constitute your payoff; otherwise, the sure payment will "
+"constitute your payoff."
+msgstr ""
+"Se scegli la lotteria, un’estrazione casuale determinerà se il tuo guadagno "
+"sarà l’ammontare alto o quello basso; altrimenti, il tuo guadagno sarà il "
+"pagamento certo."
+
+#: templates/icl/Instructions.html:50
+#, python-format
+msgid ""
+"We will convert Experimental Euros to Euros using the rate "
+"%(conversionrate)s Experimental Euros = 1 Euro."
+msgstr ""
+"Come prima, i Talleri saranno convertiti in Euro usando il tasso "
+"%(conversionrate)s Talleri = 1 Euro."
+
+#: templates/icl/Results.html:18
+msgid "Part 4 - Questions 1-5 - Results"
+msgstr "Parte 4 - Domande 1-5 - Risultati"
+
+#: templates/icl/Results.html:30
+msgid "The following decision was randomly chosen for your payment:"
+msgstr "Questa decisione è stata selezionata a caso per il tuo pagamento:"
+
+#: templates/icl/Results.html:41
+msgid "Your choice:"
+msgstr "La tua scelta:"
+
+#: templates/icl/Results.html:149
+#, python-format
+msgid ""
+"As indicated above, you stated to be indifferent between \"Option A\" and "
+"\"Option B\" in this choice. \"Option %(payoff_relevant)s\" was randomly "
+"chosen to determine your payment."
+msgstr ""
+"Come indicato su, in questa decisione hai affermato di essere indifferente "
+"tra “Opzione A” e “Opzione B”. L’“Opzione %(payoff_relevant)s” è stata "
+"selezionata a caso per determinare il tuo pagamento."
+
+#: templates/icl/Results.html:155
+#, python-format
+msgid ""
+"As indicated above, you decided for \"Option %(option_to_pay)s\" in this "
+"choice."
+msgstr ""
+"Come indicato su, in questa decisione, hai scelto l’“Opzione "
+"%(option_to_pay)s”."
+
+#: templates/icl/Results.html:163
+msgid ""
+"For \"Option A\", one of the two possible outcomes has been randomly "
+"realized based on the corresponding probabilities."
+msgstr ""
+"Il computer ha selezionato a caso uno dei due possibili guadagni per "
+"l’”Opzione A” utilizzando le probabilità corrispondenti."
+
+#: templates/icl/Results.html:170
+#, python-format
+msgid ""
+"Your payoff in this task equals %(payoff_ecu)s Sperimentali which correspond "
+"to %(payoff)s."
+msgstr ""
+"Il tuo guadagno in questa parte dell’esperimento è %(payoff_ecu)s Talleri "
+"che corrispondono a %(payoff)s."
+
+#~ msgid ""
+#~ "In the following, you can choose between a sure payment and a lottery. "
+#~ "The lottery gives you a %(p_hi)s chance of receiving %(hi)s and a "
+#~ "%(p_lo)s chance of receiving %(lo)s."
+#~ msgstr ""
+#~ "In quello che segue, ti chiederemo di scegliere tra un pagamento sicuro "
+#~ "ed una lotteria."
+
+#~ msgid "Instructions"
+#~ msgstr "Istruzioni"

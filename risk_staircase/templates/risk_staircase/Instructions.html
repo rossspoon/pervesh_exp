@@ -1,0 +1,57 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+{% load i18n %}
+
+
+{# ****************************************************************************************************************** #}
+{# *** STYLES *** #}
+{# ****************************************************************************************************************** #}
+{% block styles %}
+  <link href="{% static 'icl/css/custom.css' %}" rel="stylesheet"/>
+{% endblock %}
+
+
+{# ****************************************************************************************************************** #}
+{# *** TITLE *** #}
+{# ****************************************************************************************************************** #}
+{% block title %}
+    Part {{ part_index }}
+{% endblock %}
+
+
+{# ****************************************************************************************************************** #}
+{# *** CONTENT *** #}
+{# ****************************************************************************************************************** #}
+
+{% block content %}
+<div class="container">
+
+    <div class="instructions">
+            <h4>Instructions</h4>
+        <p>
+            Please imagine the following situation.
+            You can choose between a sure payment of a particular amount of money, or a draw,
+            where you would have an equal chance of getting amount x or getting nothing.
+        </p>
+        <p>
+            {% blocktrans trimmed with n=Constants.num_choices %}
+            We will present to you {{ n }} different situations.
+            What would you prefer: a draw with a 50 percent chance of receiving amount x,
+            and the same 50 percent chance of receiving nothing,
+            or the amount of y as a sure payment?
+            {% endblocktrans %}
+        </p>
+
+<!--        <p>
+            {% blocktrans trimmed with conversionrate=Constants.conversionrate %}
+                We will convert Experimental Euros to Euros using the rate {{ conversionrate }} Experimental Euros = 1 Euro.
+            {% endblocktrans %}
+        </p>
+-->
+    </div>
+
+    {% next_button %}
+
+</div>
+
+{% endblock %}

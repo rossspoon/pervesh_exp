@@ -1,0 +1,10 @@
+
+
+{% block content %}
+    <h2>Tax Choice</h2>
+    <p>Your income distribution is: {{ assigned_income_distribution }}</p>
+    <p></p>
+    {{ formfields }}  <!-- This line renders the form using crispy-forms -->
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+{% endblock %}
