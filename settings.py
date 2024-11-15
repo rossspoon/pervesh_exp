@@ -6,7 +6,7 @@ SESSION_CONFIGS = [
         name='tax_choice_experiment',
         display_name="Tax Choice Experiment",
         app_sequence=['Volatility_New_V2'],  # Replace with the correct app folder name
-        num_demo_participants=3,  # Ensure a multiple of 5 for grouping
+        num_demo_participants=6,  # Ensure a multiple of 5 for grouping
     ),
     dict(
         name='tax_choice',

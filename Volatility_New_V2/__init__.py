@@ -5,7 +5,7 @@ import random  # Import random module to randomize choices
 # Constants class for defining experiment settings
 class C(BaseConstants):
     NAME_IN_URL = 'Volatility_New'  # URL name of the app
-    PLAYERS_PER_GROUP = 4  # Number of players per group
+    PLAYERS_PER_GROUP = 6  # Number of players per group
     NUM_ROUNDS = 20  # Total number of rounds for the game
     TREATMENTS = [  # Different income distributions for the treatments
         [1000, 1000, 1000, 1000, 1000],  # Treatment 1
