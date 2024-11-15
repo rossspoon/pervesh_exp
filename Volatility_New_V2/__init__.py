@@ -178,4 +178,4 @@ class Results(Page):
         }
 
 
-page_sequence = [Instructions1,Instructions2,Instructions3,Instructions4,Instructions5,  TaxChoice, ResultsWaitPage, Results]
+page_sequence = [Instructions1,Instructions2,Instructions3,Instructions5,  TaxChoice, ResultsWaitPage, Results]
